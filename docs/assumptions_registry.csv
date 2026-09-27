@@ -1,0 +1,4 @@
+id,assumption,status,validation
+A1,Python312 supports selected CUDA PyTorch,verified,artifacts/system/cuda_runtime.json
+A2,Official public sample may be used for this local research,verified-use-no-redistribution,licenses/data_sources.yaml
+A3,L1 FX fills can be observed,rejected,fill metadata must be UNAVAILABLE or simulated

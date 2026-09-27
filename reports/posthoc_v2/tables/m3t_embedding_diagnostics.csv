@@ -1,0 +1,3 @@
+embedding_family,fitted_vectors,mean_norm,pairwise_distance,unseen_rule
+source,2,6.759274482727051,9.83094596862793,MEAN_OF_FITTED_EMBEDDINGS
+instrument,2,6.541998386383057,9.099867820739746,MEAN_OF_FITTED_EMBEDDINGS

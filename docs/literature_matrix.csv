@@ -1,0 +1,5 @@
+family,item,official_url,license,status,role
+foundation,Chronos-2,https://github.com/amazon-science/chronos-forecasting,Apache-2.0,verified-source,common-input-forecasting
+foundation,TimesFM,https://github.com/google-research/timesfm,source-Apache-2.0_weights-version-specific,verified-source,common-input-forecasting
+lob,DeepLOB,https://arxiv.org/abs/1808.03668,paper,study-required,FI-2010-reproduction
+market-making,Avellaneda-Stoikov,https://doi.org/10.1080/14697680701381228,paper,study-required,controller-baseline

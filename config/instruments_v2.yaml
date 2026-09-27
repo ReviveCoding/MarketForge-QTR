@@ -1,0 +1,71 @@
+schema_version: 2
+verified_at_utc: "2026-09-27"
+instruments:
+  databento:GLBX.MDP3:ES:
+    source: databento
+    venue: CME_GLOBEX
+    symbol: ES
+    asset_class: futures
+    currency: USD
+    tick_size: 0.25
+    contract_multiplier: 50.0
+    tick_value: 12.50
+    quantity_unit: contract
+    timezone: America/Chicago
+    session:
+      trading_day_start: "17:00"
+      trading_day_end: "16:00"
+      maintenance_start: "16:00"
+      maintenance_end: "17:00"
+    fee:
+      convention: per_contract_per_side_usd
+      value: 1.25
+      research_assumption: true
+    authoritative_sources:
+      - https://www.cmegroup.com/education/courses/introduction-to-equity-index-products/discover-equity-index-notional-value-and-price
+      - https://www.cmegroup.com/education/courses/introduction-to-futures/tick-movements-understanding-how-they-work
+  databento:IFEU.IMPACT:BRN:
+    source: databento
+    venue: ICE_FUTURES_EUROPE
+    symbol: BRN
+    asset_class: futures
+    currency: USD
+    tick_size: 0.01
+    contract_multiplier: 1000.0
+    tick_value: 10.0
+    quantity_unit: contract
+    timezone: Europe/London
+    session:
+      trading_day_start: "01:00"
+      trading_day_end: "23:00"
+      maintenance_start: "23:00"
+      maintenance_end: "01:00"
+    fee:
+      convention: per_contract_per_side_usd
+      value: 1.50
+      research_assumption: true
+    authoritative_sources:
+      - https://www.ice.com/products/219
+  databento:XNAS.ITCH:NVDA:
+    source: databento
+    venue: NASDAQ
+    symbol: NVDA
+    asset_class: equity
+    currency: USD
+    tick_size: 0.01
+    contract_multiplier: 1.0
+    tick_value: 0.01
+    quantity_unit: share
+    timezone: America/New_York
+    session:
+      trading_day_start: "04:00"
+      trading_day_end: "20:00"
+      maintenance_start: "20:00"
+      maintenance_end: "04:00"
+    fee:
+      convention: per_share_per_side_usd
+      value: 0.003
+      research_assumption: true
+    authoritative_sources:
+      - https://www.sec.gov/divisions/marketreg/subpenny612faq.htm
+      - https://databento.com/datasets/XNAS.ITCH

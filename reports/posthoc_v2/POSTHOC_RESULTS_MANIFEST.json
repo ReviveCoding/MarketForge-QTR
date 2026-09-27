@@ -1,0 +1,380 @@
+{
+  "schema_version": 1,
+  "diagnostic_revision": 4,
+  "analysis_layer": "MARKETFORGE_QTR_V2_POSTHOC_DIAGNOSTICS",
+  "generated_at_utc": "2026-09-27T21:06:06.968661+00:00",
+  "authoritative": false,
+  "authoritative_v2_unchanged": true,
+  "evaluation_count": 1,
+  "previous_posthoc_manifest_sha256": "5d302dcece7d74432799229cc24bb8520ba070fa4a59f08546febb095a6f8133",
+  "previous_posthoc_audit_sha256": "7928c14c233eea5c7b8ad10874a79dd14ac7eb1f83f311e497351d812c92593a",
+  "prior_revision_preserved_at": "artifacts/posthoc_v2/revisions/revision_003",
+  "authoritative_final_sha256": "bd4a8cfc4b903aba4ada5530c96c7f34764a258d71650e8a5c8452afe6251c1b",
+  "revision_type": "POSTHOC_ONLY_CORRECTION_NOT_A_V2_AMENDMENT",
+  "correction_list": [
+    "separate quote and fill-conditioned markout semantics",
+    "enforce L3 availability masks throughout execution diagnostics",
+    "exclude undefined adverse-selection targets",
+    "centralize registry-driven authoritative costs and reconcile economics",
+    "add normalized structural drift alongside raw-unit drift",
+    "rename XGBoost deterministic adverse proxy",
+    "interpret Brier decomposition and verify its identity residual",
+    "reframe exploratory slices with support and provenance",
+    "add confidence monotonicity diagnostics",
+    "strengthen queue/fill state analysis",
+    "clarify spread-capture and markout accounting",
+    "make monitoring availability-aware",
+    "document provenance timestamp erratum",
+    "add exact post-hoc semantics regression tests"
+  ],
+  "markout_semantics": [
+    "QUOTE_MARKOUT_100MS",
+    "QUOTE_MARKOUT_1000MS",
+    "SIMULATED_L3_POST_FILL_MARKOUT_100MS"
+  ],
+  "final_data_interpretation": "DESCRIPTIVE_EXPLORATORY_POSTHOC_ONLY",
+  "summary": {
+    "strongest_calibration_finding": "Frozen XGBoost had lower final post-hoc total fill Brier on bid and ask: bid 0.2592 vs M3T 0.3032; ask 0.2196 vs M3T 0.2792. This total score is not, by itself, proof of better calibration.",
+    "largest_observed_m3t_advantage_among_predefined_posthoc_slices": "('m3t_confidence_bucket', 'Q1'); support=225; M3T-minus-XGBoost macro-F1 0.1729; EXPLORATORY_POSTHOC_ONLY",
+    "where_m3t_beats_xgboost": "('m3t_confidence_bucket', 'Q1')",
+    "where_xgboost_beats_m3t": "('event_rate_bucket', 'Q2')",
+    "economic_failure_reason": "weak/adverse post-fill edge plus fees and liquidation costs",
+    "largest_raw_unit_drift": "depth_ask_5 KS=0.9906",
+    "largest_normalized_structural_drift": "relative_volatility_bps KS=0.6150",
+    "confidence_monotonicity": {
+      "M3T": {
+        "DEVELOPMENT": {
+          "classification": "MONOTONICALLY_USEFUL",
+          "spearman_confidence_rank_vs_accuracy": 0.9486832980505139,
+          "monotonicity_violations": 0,
+          "accuracy_q4_minus_q1": 0.21875
+        },
+        "FINAL_POSTHOC_ONLY": {
+          "classification": "NON_MONOTONIC",
+          "spearman_confidence_rank_vs_accuracy": -0.39999999999999997,
+          "monotonicity_violations": 2,
+          "accuracy_q4_minus_q1": -0.02898418617498788
+        }
+      },
+      "XGBOOST": {
+        "DEVELOPMENT": {
+          "classification": "WEAK",
+          "spearman_confidence_rank_vs_accuracy": 0.7999999999999999,
+          "monotonicity_violations": 1,
+          "accuracy_q4_minus_q1": 0.26041666666666663
+        },
+        "FINAL_POSTHOC_ONLY": {
+          "classification": "WEAK",
+          "spearman_confidence_rank_vs_accuracy": 0.7999999999999999,
+          "monotonicity_violations": 1,
+          "accuracy_q4_minus_q1": 0.16549310938845824
+        }
+      }
+    },
+    "largest_xgboost_fill_advantage_state": {
+      "side": "ask",
+      "condition": "realized_vol_50",
+      "development_bucket": "Q1",
+      "m3t_minus_xgboost_brier": 0.4678657170026985
+    },
+    "authoritative_economic_reconciliation": "MATCH",
+    "strongest_v3_candidate": "acquire multiple independent MBO instrument-days, then validate a queue-specialized hybrid",
+    "remaining_data_limitation": "two development and one final instrument-day primary units"
+  },
+  "files": {
+    "artifacts/posthoc_v2/confidence_monotonicity_summary.json": {
+      "sha256": "8cf230119b9fb89ead700ca0bb79b9cb1d1130091ec41b92162dd5c4de7e2ef9",
+      "bytes": 1125
+    },
+    "artifacts/posthoc_v2/development_confidence_thresholds.json": {
+      "sha256": "f45206cef3e7667c52aa19c597d209247f736860e9859c2b98618fcb339a242b",
+      "bytes": 485
+    },
+    "artifacts/posthoc_v2/development_error_cohort_rules.json": {
+      "sha256": "ce7c245f16cbb4098eeb6fc407a40c6b6024993dde81c24f37b5ad63b4228b22",
+      "bytes": 2278
+    },
+    "artifacts/posthoc_v2/development_slice_boundaries.json": {
+      "sha256": "9605413afc80fe948117ee31d33b59a3f929340c715f6418b783387693d420e4",
+      "bytes": 1963
+    },
+    "artifacts/posthoc_v2/markout_horizon_availability.json": {
+      "sha256": "931fbbc1c7a0c16ca469d7bed4630e8e823b904640bc3a830d96744aed591f42",
+      "bytes": 460
+    },
+    "artifacts/posthoc_v2/normalized_drift_semantics.json": {
+      "sha256": "c9fb07bb113bb1e9a034ffbe11b6d6683d5e77a7303ffc952e22ff2cebbea1b5",
+      "bytes": 292
+    },
+    "artifacts/posthoc_v2/POSTHOC_AUDIT.json": {
+      "sha256": "aaf388336ff877a56e5eead71005a0ba114f480e75784f920e7e23ff1897dd40",
+      "bytes": 4243
+    },
+    "artifacts/posthoc_v2/POSTHOC_CHARTER.json": {
+      "sha256": "351c88f35a3718ba8313b21da5f484d9f9e55a574c565048210bbc7ba125c1d5",
+      "bytes": 4613
+    },
+    "artifacts/posthoc_v2/POSTHOC_REVISION_004_PRECHECK.json": {
+      "sha256": "52f78d78f20b47f2cceb811aecb2ce78a68139d682932a4ee63d9294bbcd7a0a",
+      "bytes": 1969
+    },
+    "artifacts/posthoc_v2/POSTHOC_RUN_SUMMARY.json": {
+      "sha256": "902732dec416d435d618d4afd050ee4f092059a6479d93de8134e004c772727f",
+      "bytes": 10726
+    },
+    "artifacts/posthoc_v2/prediction_cache_revision.json": {
+      "sha256": "1ba8afae2df5783b6e84d3a5c5d5eca7a66e781210a9665693bcb8de987ae32d",
+      "bytes": 121
+    },
+    "artifacts/posthoc_v2/revisions/revision_003/POSTHOC_AUDIT.json": {
+      "sha256": "7928c14c233eea5c7b8ad10874a79dd14ac7eb1f83f311e497351d812c92593a",
+      "bytes": 3889
+    },
+    "artifacts/posthoc_v2/revisions/revision_003/POSTHOC_RESULTS_MANIFEST.json": {
+      "sha256": "5d302dcece7d74432799229cc24bb8520ba070fa4a59f08546febb095a6f8133",
+      "bytes": 11579
+    },
+    "reports/posthoc_v2/CALIBRATION_DEEP_DIVE.md": {
+      "sha256": "d7f8ce375acb0c5642019dc5063c5946f800c6a11056f5205c70e0af85ea589b",
+      "bytes": 2115
+    },
+    "reports/posthoc_v2/CONFIDENCE_MONOTONICITY.md": {
+      "sha256": "bca2fd1d19e6fc5d1169ce9ca0e598d869127159fc264ec63165a6b271171946",
+      "bytes": 3730
+    },
+    "reports/posthoc_v2/DRIFT_OOD_ANALYSIS.md": {
+      "sha256": "1bc634b196dd6c90fbd43aa98c2c89c31030843efff76e35d2ef3ab58f3baff3",
+      "bytes": 2999
+    },
+    "reports/posthoc_v2/ECONOMIC_ATTRIBUTION.md": {
+      "sha256": "b72228c35a6927b692eff25985230210446f18248eb23bea423e4baa3039dc74",
+      "bytes": 3153
+    },
+    "reports/posthoc_v2/ERROR_COHORT_ANALYSIS.md": {
+      "sha256": "7c0c360fde127f647ef8ce016bdb6d876b1c5b2a620377e18b6e0851660a70da",
+      "bytes": 1958
+    },
+    "reports/posthoc_v2/figures/calibration_reliability_and_confidence.png": {
+      "sha256": "f3cab51940d0bfd5c3d5f64662584b983bf1c64cba96d731dce7b3289530400e",
+      "bytes": 94314
+    },
+    "reports/posthoc_v2/figures/development_robustness_surface.png": {
+      "sha256": "743d8d44cc5bb5269bdf63250bd27b012ad03f224656064d409f8f50a603cf82",
+      "bytes": 60273
+    },
+    "reports/posthoc_v2/figures/drift_and_latent_ood.png": {
+      "sha256": "92d5c2477c44d76db715087bd363befcf92293324cad02ea91858d9f80bbd805",
+      "bytes": 58808
+    },
+    "reports/posthoc_v2/figures/economic_waterfall_and_edge_calibration.png": {
+      "sha256": "db10a78a3e1046577081b09aa83203f71ed3f18a5e4a0a4ba585bbb9f41bc7e1",
+      "bytes": 97137
+    },
+    "reports/posthoc_v2/figures/markout_tca_curves.png": {
+      "sha256": "e5328538d979346920c945db36ed507e66b5a27081de010e8bb1518fbde90a3d",
+      "bytes": 157436
+    },
+    "reports/posthoc_v2/figures/normalized_structural_drift.png": {
+      "sha256": "9a20bb3b42437112e9df5894f81e007c3853167992b57229c7b67d9b0021d282",
+      "bytes": 50399
+    },
+    "reports/posthoc_v2/INTERPRETABILITY.md": {
+      "sha256": "b5961e187b16eeb058694c49135f01f5af26baaa3042bef6a18a05afddd52569",
+      "bytes": 2129
+    },
+    "reports/posthoc_v2/MARKOUT_TCA_ANALYSIS.md": {
+      "sha256": "221c0cbbb6cfe62dcdc74ce868f796511fb6e634270ae39c0757ce7fb83e122d",
+      "bytes": 2563
+    },
+    "reports/posthoc_v2/MODEL_DISAGREEMENT.md": {
+      "sha256": "dc964a04633694e57f5fea6e88ffface72d9089c58c38db8de6511cbd07e3216",
+      "bytes": 1688
+    },
+    "reports/posthoc_v2/MONITORING_SCORECARD.md": {
+      "sha256": "b607fc10ed1d1e5f9ab41de0a69b66235a67bfc2da1950ab15a04014b0495830",
+      "bytes": 2337
+    },
+    "reports/posthoc_v2/POSTHOC_EXECUTIVE_SUMMARY.md": {
+      "sha256": "350be8ed22da972010e2bfd44b1caf59fb5343ad9fd19eb787a291c75b3b90bf",
+      "bytes": 4477
+    },
+    "reports/posthoc_v2/POSTHOC_LIMITATIONS.md": {
+      "sha256": "4f7f9c9ef67fe991142a252d080bd244cf3a5753aabb72053921f913e0a31f7b",
+      "bytes": 1099
+    },
+    "reports/posthoc_v2/PROVENANCE_ERRATA.md": {
+      "sha256": "c37297f4acba53f7da894f5c5c51f382e8bcf30dbf9c30028326211ef99831b9",
+      "bytes": 1392
+    },
+    "reports/posthoc_v2/QUEUE_FILL_ANALYSIS.md": {
+      "sha256": "e3032eb527c83307bff582028c4afbf39acb6f3a23f6c5ccc9db4753f01719d3",
+      "bytes": 2996
+    },
+    "reports/posthoc_v2/ROBUSTNESS_SURFACES.md": {
+      "sha256": "ba0ffcf90bb51e40338f493f0808011445904236d50da449c295c1ad800811f8",
+      "bytes": 2266
+    },
+    "reports/posthoc_v2/SLICE_ANALYSIS.md": {
+      "sha256": "f74662204d38b51072c804bad65dd9b5f85b9688dcf4d80f055d0372dab643e7",
+      "bytes": 2628
+    },
+    "reports/posthoc_v2/tables/authoritative_economic_reconciliation.csv": {
+      "sha256": "1e0c28e87191de2c6548f98b58d5a41ad1581d63eef17c868ecc176b8c3d50b3",
+      "bytes": 677
+    },
+    "reports/posthoc_v2/tables/calibration_metrics.csv": {
+      "sha256": "f18922de3ef60c3f915151161d09965db45e89579611281cf1d8130321ca5c41",
+      "bytes": 13639
+    },
+    "reports/posthoc_v2/tables/confidence_monotonicity.csv": {
+      "sha256": "12cd5c4aa5a1ad2f69763030f9586ba2a93dd42fc8ee712663009a0b88047102",
+      "bytes": 3582
+    },
+    "reports/posthoc_v2/tables/direction_disagreement.csv": {
+      "sha256": "8284f36da8b9da991372c3fdc25bff46da5d6c2c442a98d3431c2fefd94f4f00",
+      "bytes": 1341
+    },
+    "reports/posthoc_v2/tables/economic_attribution.csv": {
+      "sha256": "44dda895dc80bf7fe76aee9a1b4865318950480eafd67c5a5c8882f55704485b",
+      "bytes": 973
+    },
+    "reports/posthoc_v2/tables/error_cohorts.csv": {
+      "sha256": "bcca5b74d4400238feeef84ee500258742474609dc876c3299417eeedf8c1253",
+      "bytes": 2021
+    },
+    "reports/posthoc_v2/tables/execution_behavior_slices.csv": {
+      "sha256": "a45e0b8f59829ee901250cf6aa6da52d55ed11bec845105d704f54e764572268",
+      "bytes": 49530
+    },
+    "reports/posthoc_v2/tables/feature_drift.csv": {
+      "sha256": "59866383d93e83017c1a852f00988b7ebf33fcc0e7e4629264052c1d5993befb",
+      "bytes": 2196
+    },
+    "reports/posthoc_v2/tables/latent_ood_performance.csv": {
+      "sha256": "470abfd7f21fc0b0f2f118a592769db818f6c9a3442635013e9255b703ed9bce",
+      "bytes": 372
+    },
+    "reports/posthoc_v2/tables/m3t_embedding_diagnostics.csv": {
+      "sha256": "65fe7912559092c72ff98572bb4040bbb7e47efa0f71ef3a97c1ed041050c80d",
+      "bytes": 220
+    },
+    "reports/posthoc_v2/tables/m3t_latent_linear_probe.csv": {
+      "sha256": "14b021124f14561b1b9616802014cefa4bdd7a17fa4bef13f6d1bf1e18116ce8",
+      "bytes": 181
+    },
+    "reports/posthoc_v2/tables/m3t_occlusion.csv": {
+      "sha256": "57604f9c3212b2136428adaec1afc0098874903edae12d819f2b707e10c0d869",
+      "bytes": 710
+    },
+    "reports/posthoc_v2/tables/markout_curves.csv": {
+      "sha256": "821878e7df4e35547ba55bcb04f4fa7ec249d89d3742e96697b4b1ed7ffa94fe",
+      "bytes": 131499
+    },
+    "reports/posthoc_v2/tables/monitoring_scorecard.csv": {
+      "sha256": "d1aa488d5de1fdaf51aebd16fb66eeba379eb0e81865cbc44b3d885538681aac",
+      "bytes": 2614
+    },
+    "reports/posthoc_v2/tables/normalized_structural_drift.csv": {
+      "sha256": "60974d7b0a0a9d14f59b09ea5086e480bf2bd41dfa38a8354bd96a2133765e17",
+      "bytes": 2563
+    },
+    "reports/posthoc_v2/tables/operational_slices.csv": {
+      "sha256": "920a1e7e28667fbf6154dee9880139b6871458e390fa6a8d78f918b21df84a83",
+      "bytes": 83567
+    },
+    "reports/posthoc_v2/tables/predicted_vs_realized_edge.csv": {
+      "sha256": "60b104d7b7f4f9482b4fe691e870c5d12cf8630f7baa6faf487bf4d4f440918f",
+      "bytes": 10508
+    },
+    "reports/posthoc_v2/tables/queue_fill_calibration.csv": {
+      "sha256": "224c55c25a75f4ee9e3e76123c585cd276d5a4869cf8d01fc4ea5405df754f4f",
+      "bytes": 34733
+    },
+    "reports/posthoc_v2/tables/reliability_curves.csv": {
+      "sha256": "736fc6eb8d3952cd05c709a3affecb44009025f12eb24f1dbdf566320cd5b1b5",
+      "bytes": 64838
+    },
+    "reports/posthoc_v2/tables/repeated_timestamp_weighting_sensitivity.csv": {
+      "sha256": "deaa24df1a7cced70c2dff26191e85a22786e66567c22585e3999766b2c4384e",
+      "bytes": 464
+    },
+    "reports/posthoc_v2/tables/risk_coverage.csv": {
+      "sha256": "60341d26f335afeb7b4b17f52e7d447612931c1028863d029ff055c570bd3887",
+      "bytes": 3059
+    },
+    "reports/posthoc_v2/tables/robustness_surfaces.csv": {
+      "sha256": "03f1328141a097b9a3eb1e09e96f47dca3ad07656ad77b2d4152949441798f78",
+      "bytes": 749043
+    },
+    "reports/posthoc_v2/tables/xgboost_interactions.csv": {
+      "sha256": "811f233d2be04423b04fb3f70c37fbc8c40447f87aa3ec50588c54e42b1d28c8",
+      "bytes": 2510
+    },
+    "reports/posthoc_v2/tables/xgboost_slice_shap.csv": {
+      "sha256": "d03c28e937f8fcd2e0a18b7a6d475dbfa14fef491f6a4a489d43b62dcc615984",
+      "bytes": 7128
+    },
+    "reports/posthoc_v2/tables/xgboost_tree_shap.csv": {
+      "sha256": "3fa9cb8adee077953c10302fd64d44bf314c83779c085919a552d63c48f2ccd3",
+      "bytes": 2722
+    },
+    "reports/posthoc_v2/V3_CANDIDATES.md": {
+      "sha256": "ca5fe37fbff5997400a839ef1020ad5d6e65b7f5628ebc41b402618dc62b10fd",
+      "bytes": 1454
+    },
+    "results/posthoc_v2/confidence_entropy.parquet": {
+      "sha256": "3d0dc49c1696df9bcedb4a1a96af963200bf825b2fbc4f522d5055386e234a06",
+      "bytes": 83192
+    },
+    "results/posthoc_v2/development_diagnostics.parquet": {
+      "sha256": "2f2f240200c38cf505623c6983aa0ce432ff9a52478fd0b933b2e86706d55e75",
+      "bytes": 395453
+    },
+    "results/posthoc_v2/development_m3t_latent.npy": {
+      "sha256": "a43c52a1f607c69fa2751a78caa1b14437fc33275318d769311129031dda79b7",
+      "bytes": 73856
+    },
+    "results/posthoc_v2/economic_attribution_detail.parquet": {
+      "sha256": "93a9d27bd327dbd8f592b5163cab94a650c83140dabc427710cfb063af44a4a7",
+      "bytes": 530673
+    },
+    "results/posthoc_v2/fill_disagreement_development_ask.parquet": {
+      "sha256": "9eb8c011540fbbe3b77e8150615da690f6b7aad2030c3a0896ba5aaae256153c",
+      "bytes": 15744
+    },
+    "results/posthoc_v2/fill_disagreement_development_bid.parquet": {
+      "sha256": "11347f5d27c2e97fa274ae3e8d464f6c65c36656eb820e32b78adc2c82148cc7",
+      "bytes": 15786
+    },
+    "results/posthoc_v2/fill_disagreement_final_posthoc_only_ask.parquet": {
+      "sha256": "3b217b556c1955fc48cb20f4cdfb29c5c6c51ecfa962d8704bd81f4bd4cd62c1",
+      "bytes": 100791
+    },
+    "results/posthoc_v2/fill_disagreement_final_posthoc_only_bid.parquet": {
+      "sha256": "3e935a533edab02fd154a3398d3aa2236503290d219b8f0408f53143a3c3021d",
+      "bytes": 100881
+    },
+    "results/posthoc_v2/final_m3t_authoritative_predictions.parquet": {
+      "sha256": "a283bae91980fd45cb35ed3a59bf2c5bd05fc0d80db6310e3d3b7fe58abc0d0b",
+      "bytes": 176213
+    },
+    "results/posthoc_v2/final_m3t_latent.npy": {
+      "sha256": "810a1a9af20e848cdf38519ec20700e6d20b4f31d5069adc63ed885210663d2e",
+      "bytes": 615872
+    },
+    "results/posthoc_v2/final_posthoc_diagnostics.parquet": {
+      "sha256": "0d9762ef7c96739ecf7af143cc19573ee2a802b3035d94826b7562dd103c36c7",
+      "bytes": 2282602
+    },
+    "results/posthoc_v2/final_xgboost_all_rows.parquet": {
+      "sha256": "b0615540324f9208d9111ade66aec22f51619260820cde7536f9ec3f6b2bf193",
+      "bytes": 1989293
+    },
+    "results/posthoc_v2/latent_ood_distance.parquet": {
+      "sha256": "ffe76fb001e58d75619c35447f7d65f1123059080048e8d98ce2d344043e96e5",
+      "bytes": 37615
+    }
+  },
+  "file_count_excluding_manifest": 73,
+  "manifest_content_hash": "a026b3f4e53f960f22d1e54e669b56ff544bb9da79f324304a3e2dc8219ea674"
+}

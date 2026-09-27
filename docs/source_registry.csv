@@ -1,0 +1,7 @@
+checked_utc,source,url,authority,note
+2026-09-27,PyTorch,https://docs.pytorch.org/get-started/locally/,official,Windows Python and CUDA installation
+2026-09-27,Databento schemas,https://databento.com/docs/knowledge-base,official,MBO L3 and MBP-10 L2 semantics
+2026-09-27,Databento MBO,https://databento.com/docs/schemas-and-data-formats/mbo,official,timestamps sequence snapshots
+2026-09-27,Databento samples,https://databento.com/tick-data,official,public sample entry point
+2026-09-27,Chronos,https://github.com/amazon-science/chronos-forecasting,official-code,Apache-2.0 source
+2026-09-27,TimesFM,https://github.com/google-research/timesfm,official-code,version-specific weight terms

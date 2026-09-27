@@ -1,0 +1,4 @@
+source,modality,access,current_status,use
+FI-2010,L2-normalized,official-record,blocked-download-disabled,benchmark-only
+Dukascopy,provider-specific-FX-L1,public-historical,not-acquired-terms-scope,long-history-transfer
+Databento-public-samples,MBO-and-MBP10,official-public-sample,acquired,queue-and-simulator-validation

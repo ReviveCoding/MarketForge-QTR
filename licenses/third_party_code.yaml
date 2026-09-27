@@ -1,0 +1,10 @@
+dependencies:
+  pytorch:
+    url: "https://github.com/pytorch/pytorch"
+    license: "BSD-3-Clause"
+  polars:
+    url: "https://github.com/pola-rs/polars"
+    license: "MIT"
+  duckdb:
+    url: "https://github.com/duckdb/duckdb"
+    license: "MIT"

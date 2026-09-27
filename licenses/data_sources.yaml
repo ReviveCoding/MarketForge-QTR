@@ -1,0 +1,22 @@
+sources:
+  fi2010:
+    official_url: "https://etsin.fairdata.fi/dataset/73eb48d7-4dbc-4a10-a52a-da745b47a649"
+    license_url: "https://creativecommons.org/licenses/by/4.0/"
+    status: "BLOCKED_EXTERNAL_DATA_DOWNLOAD_DISABLED"
+    authentication: "not_applicable_but_download_disabled"
+    payment: false
+    raw_git: false
+  dukascopy:
+    official_url: "https://www.dukascopy.com/swiss/english/marketwatch/historical/"
+    license_url: null
+    status: "NOT_ACQUIRED_TERMS_AND_SOURCE_SCOPE_UNSUITABLE"
+    authentication: "not_used"
+    payment: false
+    raw_git: false
+  databento_samples:
+    official_url: "https://databento.com/docs/examples/basics-historical/download-data-samples"
+    license_url: "https://databento.com/terms"
+    status: "ACQUIRED_OFFICIAL_PUBLIC_SAMPLE"
+    authentication: "none_for_public_sample"
+    payment: false
+    raw_git: false

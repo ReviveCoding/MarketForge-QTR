@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "updated_at_utc": "2026-09-27T18:55:00Z",
+  "project_status": "V2_CORRECTED_PROTOCOL_COMPLETE_WITH_OUTCOME_BLIND_STRUCTURAL_AMENDMENT",
+  "active_gate": null,
+  "v1": {
+    "status": "SUPERSEDED",
+    "manifest": "artifacts/v1_superseded_manifest.json",
+    "final_lockbox": "SPENT_DO_NOT_REUSE",
+    "final_evaluation": "IMMUTABLE_DO_NOT_RERUN"
+  },
+  "v2": {
+    "result_label": "FINAL_EVALUATION_V2_WITH_OUTCOME_BLIND_STRUCTURAL_AMENDMENT",
+    "evaluation_count": 1,
+    "final_evaluation": "artifacts/final_evaluation_v2.json",
+    "final_report": "reports/final_v2/MARKETFORGE_QTR_TECHNICAL_REPORT.md",
+    "report_manifest": "reports/final_v2/RESULTS_MANIFEST.json",
+    "amendments": [
+      "artifacts/final_freeze_amendment_v2_001.json",
+      "artifacts/final_freeze_amendment_v2_002.json",
+      "artifacts/final_freeze_amendment_v2_003.json"
+    ]
+  },
+  "v2_stages": {
+    "v2_gate_00_preserve_v1": {"status": "SUCCEEDED"},
+    "v2_gate_01_scientific_corrections": {"status": "SUCCEEDED"},
+    "v2_gate_02_data_and_lockbox": {"status": "SUCCEEDED"},
+    "v2_gate_03_simulated_l3_features": {"status": "SUCCEEDED"},
+    "v2_gate_04_splits_leakage": {"status": "SUCCEEDED"},
+    "v2_gate_05_corrected_model_ladder": {"status": "SUCCEEDED"},
+    "v2_gate_06_xgboost_baselines": {"status": "SUCCEEDED"},
+    "v2_gate_07_simulator_validation": {"status": "SUCCEEDED"},
+    "v2_gate_08_development_economics": {"status": "SUCCEEDED"},
+    "v2_gate_09_transfer_robustness_systems": {"status": "SUCCEEDED"},
+    "v2_gate_10_statistics_selection_bias": {"status": "SKIPPED_INSUFFICIENT_SAMPLE"},
+    "v2_gate_11_monitoring_failure_analysis": {"status": "SUCCEEDED"},
+    "v2_gate_12_pre_final_audit": {"status": "SUCCEEDED"},
+    "v2_gate_13_final_freeze": {"status": "SUCCEEDED"},
+    "v2_gate_14_final_evaluation": {"status": "SUCCEEDED_WITH_OUTCOME_BLIND_STRUCTURAL_AMENDMENT"},
+    "v2_gate_15_reports": {"status": "SUCCEEDED"}
+  }
+}

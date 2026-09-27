@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marketforge-qtr"
+version = "2.0.0"
+description = "Research-grade market microstructure modeling and execution-aware evaluation"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "numpy>=2.1,<3",
+  "pydantic>=2.9,<3",
+  "PyYAML>=6.0,<7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3,<9", "ruff>=0.11,<1"]
+research = ["polars>=1.20,<2", "pyarrow>=18,<22", "duckdb>=1.2,<2", "scikit-learn>=1.6,<2", "scipy>=1.15,<2", "pandas>=2.2,<3", "matplotlib>=3.10,<4", "xgboost>=3,<4"]
+ml = ["torch>=2.7,<3"]
+
+[project.scripts]
+marketforge = "marketforge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"

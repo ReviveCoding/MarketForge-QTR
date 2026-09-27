@@ -1,0 +1,9 @@
+models:
+  chronos:
+    code_url: "https://github.com/amazon-science/chronos-forecasting"
+    code_license: "Apache-2.0"
+    weights_license: "VERIFY_PER_CHECKPOINT"
+  timesfm:
+    code_url: "https://github.com/google-research/timesfm"
+    code_license: "Apache-2.0"
+    weights_license: "VERIFY_PER_VERSION_BEFORE_DOWNLOAD"

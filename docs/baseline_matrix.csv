@@ -1,0 +1,7 @@
+baseline,track,device,headline_eligible
+persistence,aggregated,CPU,yes
+ridge_logistic,aggregated,CPU,yes
+XGBoost,aggregated,CUDA-when-practical,yes
+MLP_LSTM_TCN_Transformer,both,CUDA,after-validation
+DeepLOB_TLOB,full-book,CUDA,after-reproduction-gate
+Chronos_TimesFM,common-input,CUDA,after-license-and-version-freeze
