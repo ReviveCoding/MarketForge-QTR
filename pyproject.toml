@@ -14,8 +14,8 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8.3,<9", "ruff>=0.11,<1"]
-research = ["polars>=1.20,<2", "pyarrow>=18,<22", "duckdb>=1.2,<2", "scikit-learn>=1.6,<2", "scipy>=1.15,<2", "pandas>=2.2,<3", "matplotlib>=3.10,<4", "xgboost>=3,<4"]
+dev = ["pytest>=8.3,<10", "ruff>=0.11,<1"]
+research = ["polars>=1.20,<2", "pyarrow>=18,<26", "duckdb>=1.2,<2", "scikit-learn>=1.6,<2", "scipy>=1.15,<2", "pandas>=2.2,<4", "matplotlib>=3.10,<4", "xgboost>=3,<4"]
 ml = ["torch>=2.7,<3"]
 
 [project.scripts]
